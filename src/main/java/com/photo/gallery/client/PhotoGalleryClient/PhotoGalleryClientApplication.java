@@ -12,8 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.photo.gallery.client.PhotoGalleryClient.model.Bike;
-import com.photo.gallery.client.PhotoGalleryClient.repositories.BikeRepository;
+import com.photo.gallery.client.PhotoGalleryClient.model.User;
+import com.photo.gallery.client.PhotoGalleryClient.repositories.UserRepository;
 
 
 @SpringBootApplication
@@ -29,23 +29,20 @@ public class PhotoGalleryClientApplication {
 	
 	
 	@Bean
-	public CommandLineRunner demo( BikeRepository bikerepo) {
+	public CommandLineRunner demo( UserRepository userRepo) {
 		return (args) -> {
 			// save a couple of customers
 
-//			bikerepo.save(new Bike("Klappt", "Endlich"));
-//			bikerepo.save(new Bike("CBR250R", "Honda"));
-//			bikerepo.save(new Bike("Ninja250R", "Kaswasaki"));
-//			bikerepo.save(new Bike("R1", "Yamaha"));
-//			bikerepo.save(new Bike("FatBoy", "Harley Davidson"));
+//			userRepo.save(new User("erads", "Erik", "Radszewski", "test"));
+
 
 			// fetch all customers
-			log.info("Customers found with findAll():");
-			log.info("-------------------------------");
-			for (Bike Bike : bikerepo.findAll()) {
-				log.info(Bike.toString());
-			}
-			log.info("");
+//			log.info("Customers found with findAll():");
+//			log.info("-------------------------------");
+//			for (Bike Bike : bikerepo.findAll()) {
+//				log.info(Bike.toString());
+//			}
+//			log.info("");
 
 //			// fetch an individual customer by ID
 //			Customer customer = repository.findOne(1L);
@@ -60,7 +57,7 @@ public class PhotoGalleryClientApplication {
 //			for (Customer bauer : repository.findByLastName("Bauer")) {
 //				log.info(bauer.toString());
 //			}
-			log.info("");
+//			log.info("");
 		};
 	}
 }

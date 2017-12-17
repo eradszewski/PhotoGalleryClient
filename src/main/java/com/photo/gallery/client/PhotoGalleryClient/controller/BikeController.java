@@ -17,7 +17,7 @@ import com.photo.gallery.client.PhotoGalleryClient.service.BikeService;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/bike")
 public class BikeController {
  
 	List<Bike> bikes = null;
